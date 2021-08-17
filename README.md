@@ -3,7 +3,7 @@
 
 Samples script for obtaining a token and querying/deleting Threat Response incidents
 
-Expects API client_id and secret as command line args
+Expects API client_id and client_secret as command line args
 
 <h3>Creating API Credentials</h3>
 https://ciscosecurity.github.io/sxo-05-security-workflows/workflows/response/tr-api#generating-an-api-client
