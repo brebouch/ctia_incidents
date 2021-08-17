@@ -54,4 +54,3 @@ def delete_incident_id(token, id):
 token = get_token(client_id, client_secret)
 query = 'sort_order=desc&limit=100'
 incidents = get_incidents(token, query)
-print('hi')
