@@ -22,8 +22,8 @@ def get_token(i, s):
 
 
 def get_incidents(token, search):
-    base_url = 'https://intel.amp.cisco.com/ctia/incident/search'
-    url = base_url + '?' + search
+    base_url = 'https://private.intel.amp.cisco.com/ctia/incident/search?'
+    url = base_url + search
     header = {
         'Accept': 'application/json',
         'Authorization': 'Bearer ' + token
@@ -32,8 +32,8 @@ def get_incidents(token, search):
 
 
 def delete_incident_query(token, search):
-    base_url = 'https://intel.amp.cisco.com/ctia/incident/search'
-    url = base_url + '?' + search
+    base_url = 'https://private.intel.amp.cisco.com/ctia/event/search?'
+    url = base_url + search
     header = {
         'Accept': 'application/json',
         'Authorization': 'Bearer ' + token
@@ -42,7 +42,7 @@ def delete_incident_query(token, search):
 
 
 def delete_incident_id(token, id):
-    base_url = 'https://intel.amp.cisco.com/ctia/incident/'
+    base_url = 'https://private.intel.amp.cisco.com/ctia/incident/'
     url = base_url + str(id)
     header = {
         'Accept': 'application/json',
@@ -52,5 +52,5 @@ def delete_incident_id(token, id):
 
 
 token = get_token(client_id, client_secret)
-query = 'sort_order=desc&limit=100'
+query = 'status=open&search_fields=incident_time.remediated&query_mode=simple_query_string'
 incidents = get_incidents(token, query)
