@@ -1,5 +1,5 @@
 
-<h1>Sample Threat Response Sample</h1>
+<h1>Sample Threat Response Incident Search and Delete</h1>
 
 Samples script for obtaining a token and querying/deleting Threat Response incidents
 
